@@ -19,7 +19,11 @@ describe('FilterComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  describe("Jasmine Test Environment", () => { it("is working", () => expect(true).toBe(false)); });
+
+
 });

@@ -8,9 +8,18 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  function writeScreenShot(data, filename) {
+    var stream = fs.createWriteStream(filename);
+    stream.write(new Buffer(data, 'base64'));
+    stream.end();
+  }
+
+  it("should be Rio de Janeiro", () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('jurema-bolsafamilia app is running!');
+    expect(page.selectRio()).toBeTruthy();
+    browser.takeScreenshot().then(function (png) {
+      writeScreenShot(png, 'print.png');
+  });
   });
 
   afterEach(async () => {
