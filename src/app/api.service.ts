@@ -19,6 +19,6 @@ export class ApiService {
 
   getBolsaFamilia(id: string, data: string): Observable<any> {
     return this.http.
-    get<any>(`http://localhost:4200/api/api-de-dados/bolsa-familia-por-municipio?mesAno=${data}&codigoIbge=${id}&pagina=1`);
+    get<any>(`http://transparencia.gov.br/api-de-dados/bolsa-familia-por-municipio?mesAno=${data}&codigoIbge=${id}&pagina=1`);
   }
 }
