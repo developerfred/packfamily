@@ -1,0 +1,33 @@
+.loader {
+  background: #fff;
+  color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 30vh;
+  margin: 0 auto;
+  display: flex;
+}
+svg{
+
+  transform-origin: 50% 65%;
+}
+
+
+svg polygon {
+	stroke-dasharray: 17;
+	animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+}
+
+@keyframes dash {
+	to{
+		stroke-dashoffset: 136
+	}
+}
+
+@keyframes rotate{
+	100% {
+		transform: rotate(180deg )
+    }
+  }

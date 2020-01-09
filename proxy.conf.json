@@ -1,0 +1,12 @@
+{
+"/api/*": {
+    "target": {
+        "host": "transparencia.gov.br",
+        "protocol": "http:"
+    },
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/api" : ""}
+    }
+}
